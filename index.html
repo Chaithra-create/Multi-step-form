@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+<body>
+
+  <div class="Main-div container">
+  <!-- Sidebar start -->
+
+<div class="sidebar">
+  <img class="side-img" src="/assets/images/bg-sidebar-desktop.svg" alt="sidebar-img">
+
+    <ol>
+        <div class="row step-1">
+          <li>
+            <div class="col-sm"> 
+              <span class="form-stepper-circle form-stepper-active" step="1">
+                <span>1</span>
+            </span>
+            </div>
+ <div class="row">
+  <div class="col-sm">
+    <p>STEP 1</p>
+  </div>
+  <div class="col-sm">
+    <b>YOUR INFO</b> 
+  </div>
+ </div>
+        </div>
+      </li> 
+       
+         <div class="row step-2">
+          <li>
+            <div class="col-sm"> 
+              <span class="form-stepper-circle" step="2">
+                <span>2</span>
+            </span>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <p>STEP 2</p> 
+              </div>
+              <div class="col-sm">
+                <b>SELECT PLAN</b> 
+              </div>
+            </div>
+          
+        </div>
+        </li>
+        
+         <div class="row step-3">
+          <li>
+            <div class="col-sm"> 
+              <span class="form-stepper-circle" step="3">
+                <span>3</span>
+            </span>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <p>STEP 3</p> 
+              </div>
+              <div class="col-sm">
+                <b>ADD-ONS</b> 
+              </div>
+            </div>
+        </div>
+        </li>
+        
+         <div class="row step-4">
+          <li>
+            <div class="col-sm"> 
+              <span class="form-stepper-circle" step="4">
+                <span>4</span>
+            </span>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <p>STEP 4</p> 
+              </div>
+              <div class="col-sm">
+                <b>SUMMARY</b> 
+              </div>
+            </div>
+        </div>
+        </li>
+    </ol>
+    
+
+</div>
+ 
+
+  <!-- Sidebar end -->
+
+  <!-- Step 1 start -->
+<div class="personalInfo-form form-step" id = "step-1">
+   <h2>Personal info</h2>
+   <p>Please provide your name, email address, and phone number.</p>
+   <form name="myForm">
+    <div class="form-group">
+   <label for="name">Name</label>
+   <div class="name-err err-div d-none">This field is required</div>
+   <input type="text" class="form-control" name="name" id="name" placeholder=" e.g. Stephen King">
+    </div>
+    <div class="form-group">
+      <label for="Email">Email Address</label>
+      <div class="email-err err-div d-none">This field is required</div>
+      <input type="email" class="form-control" name="Email"  id="Email" placeholder=" e.g. stephenking@lorem.com">
+    </div>
+   <div class="form-group">
+    <label for="phone">Phone Number</label>
+    <div class="phone-err err-div d-none">This field is required</div>
+    <input type="phone" class="form-control" name="phone" id="phone" placeholder="e.g. +1 234 567 890">
+   </div>
+   <button class="btn btn-primary next btn-navigate-form-step" type="button" stepNumber = "2">Next Step</button>
+   </form>
+</div>
+  <div class="form-step personalInfo-form d-none" id="step-2">
+    <h3>  Select your plan</h3>
+    <p>  You have the option of monthly or yearly billing.</p>
+    <div class="row">
+      <div class="col-lg-4">
+<div class="card selected" tabindex="-1">
+  <img class="card-img" src="/assets/images/icon-arcade.svg" alt="sel-arcade">
+<div class="card-body">
+  <h5 class="card-title">Arcade</h5>
+ <p class="card-text">$9/mo</p> 
+</div>
+</div>
+      </div>
+<div class="col-lg-4">
+  <div class="card" tabindex="-1">
+    <img class="card-img" src="/assets/images/icon-advanced.svg" alt="sel-adv">
+  <div class="card-body">
+    <h5 class="card-title">Advanced</h5>
+   <p class="card-text">$12/mo</p> 
+  </div>
+  </div>
+</div>
+<div class="col-lg-4">
+  <div class="card" tabindex="-1">
+    <img class="card-img" src="/assets/images/icon-pro.svg" alt="sel-adv">
+  <div class="card-body">
+    <h5 class="card-title">Pro</h5>
+   <p class="card-text">$15/mo</p> 
+  </div>
+  </div>
+</div>
+    </div>
+    <div class="row flex-container">
+      <p class="option1 change-color">Monthly</p>
+      <label class="switch">
+        <input type="checkbox" id="checkToggle">
+        <span class="slider round"></span>
+      </label>
+      <p class="option2">Yearly</p>
+    </div>
+    
+    <button class="Prev-btn btn-navigate-form-step" type="button" stepNumber = "1">Go Back</button>
+    <button class="btn btn-primary next btn-navigate-form-step" type="button" stepNumber = "3">Next Step</button>
+  </div>
+  <div class="personalInfo-form form-step d-none" id = "step-3">
+<h3>Pick add-ons</h3>
+<p class="p-form">Add-ons help enhance your gaming experience.</p>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="Online service" id="flexCheckDefault">
+<label for="flexCheckDefault">
+ <ul>
+  <li class="list-item"> Online service</li>
+  <li> <p>Access to multiplayer games</p> </li>
+ </ul> 
+</label>
+<div class="price">
+  +$1/mo
+    </div>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="Larger storage" id="flexCheckDefault">
+<label for="flexCheckDefault">
+  <ul>
+    <li class="list-item"> Larger storage</li>
+    <li> <p> Extra 1TB of cloud saves</p> </li>
+   </ul> 
+  </label>
+  <div class="price">
+    +$2/mo
+      </div>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="checkbox" value="Customizable profile" id="flexCheckDefault">
+<label for="flexCheckDefault">
+  <ul>
+    <li class="list-item"> Customizable profile</li>
+    <li> <p>  Custom theme on your profile</p> </li>
+   </ul> 
+  </label>
+  <div class="price">
+    +$2/mo
+      </div>
+</div>
+<button class="Prev-btn btn-navigate-form-step" type="button" stepNumber = "2">Go Back</button>
+    <button class="btn btn-primary next btn-navigate-form-step" type="button" stepNumber = "4">Next Step</button>
+  </div>
+  <div  class="personalInfo-form form-step d-none" id = "step-4">
+  <h3> Finishing up</h3>
+  <p>Double-check everything looks OK before confirming.
+  </p>
+  <div class="showPlan">
+    <div class="align-div">
+      <h5 class="planSelected"></h5>
+      <p class="timePeriod"></p>
+    </div>
+
+<p> 
+<a href="#" class="change">Change</a>  
+</p>
+<p class="price"></p>
+  </div>
+  <hr>
+  <div class="add-ons">
+<p class="added-0"></p>
+<p class="price-0 addPrice"></p>
+<p class="added-1"></p>
+<p class="price-1 addPrice"></p>
+<p class="added-2"></p>
+<p class="price-2 addPrice"></p>
+  </div>
+  <hr>
+  <div class="Total">
+<p>Total(per month)</p>
+<p class="totalPrice"></p>
+  </div>
+  <button class="Prev-btn btn-navigate-form-step" type="button" stepNumber = "3">Go Back</button>
+  <button class="btn btn-primary next btn-navigate-form-step" type="button" stepNumber = "5">Confirm</button>
+  </div>
+  <div  class="personalInfo-form form-step d-none" id = "step-5">
+   <div class="thank-you">
+     <img src="/assets/images/icon-thank-you.svg" alt="thank-you">
+     <h2>Thank you!</h2>
+     <p>
+      Thanks for confirming your subscription! We hope you have <br>fun 
+      using our platform. If you ever need support, please feel <br> free 
+      to email us at support@loremgaming.com.
+     </p>
+   </div>
+  </div>
+   </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Chaithra Shettigar</a>.
+  </div>
+  <script src="/index.js"></script>
+</body>
+</html>
